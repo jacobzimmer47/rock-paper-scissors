@@ -1,0 +1,74 @@
+/* * {
+    border: 1px solid red;
+    
+} */
+
+body {
+    display: flex;
+    height: 100%;
+    font-family: sans-serif;
+    
+}
+
+.human-side, .cpu-section {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+.human-info, .cpu-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+}
+
+.human-icon, .cpu-icon {
+    display: flex;
+    font-size: 60px;
+}
+ 
+
+.center-section {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: aqua;
+    
+}
+
+.center-title1 {
+    font-size: 40px;
+    background-color: transparent;
+}
+
+.fight-section {
+    display: flex;
+    padding: 27%;
+    font-size: 75px;
+
+}
+
+ .scissors-fighter, .rock-fighter, .spock-fighter {
+    position: relative;
+    top: 50px;
+ }
+
+
+.paper-fighter, .lizard-fighter {
+    position: relative;
+    bottom: 50px;
+   
+}
+
+
