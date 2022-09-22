@@ -58,8 +58,11 @@ body {
 
 .fight-section {
     display: flex;
+    align-items: center;
     padding: 27%;
     font-size: 75px;
+    flex-direction: row-reverse;
+    justify-content: center;
 
 }
 

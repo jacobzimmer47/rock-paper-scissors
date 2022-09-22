@@ -80,6 +80,10 @@ class Game {
             this.cpuWinCount += 1
         }
     }
+    playAgain() {
+        this.humanWinCount = 0
+        this.cpuWinCount = 0
+    }
 
 }
 // add tie functionallity for dom
