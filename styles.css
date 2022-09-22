@@ -3,6 +3,10 @@
     
 } */
 
+.hidden {
+    display: none;
+}
+
 body {
     display: flex;
     height: 100%;
