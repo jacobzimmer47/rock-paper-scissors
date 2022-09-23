@@ -1,6 +1,23 @@
-class Player{
-    constructor(fighter) {
-        this.chosenFighter = fighter;
-        this.winCount = 0;
+class Player {
+    constructor(name, token) {
+      this.name = name;
+      this.token = token;
+      this.win = 0;
+      this.currentChoice = "";
+  
     }
-}
+  
+    getCpuChoice() {
+      if (game.type === "classic") {
+        game.computer.currentChoice = classic[this.generatePick(classic)]
+      } else {
+        game.computer.currentChoice = difficult[this.generatePick(difficult)]
+      }
+    }
+  
+    generatePick(array) {
+      return Math.floor(Math.random() * array.length)
+    }
+    }
+
+  
