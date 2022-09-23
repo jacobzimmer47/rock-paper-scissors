@@ -1,91 +1,47 @@
 class Game {
     constructor() {
-        this.fighters = [0, 1, 2, 3, 4]
-        this.cpuPick = null;
-        this.humanPick = null;
-        this.humanWinCount = 0
-        this.cpuWinCount = 0
-    }
-    playerSelection(fighter) {
-        this.humanPick = fighter
+      this.type = "";
+      this.icons = [];
+      this.human = new Player("human", "🧍🏼");
+      this.computer = new Player("computer", "🤖");
+      this.winner = "";
     }
 
-    getCpuFighter () {
-        var index = Math.floor(Math.random() * this.fighters.length);
-        this.cpuPick = index 
+    chooseIcons() {
+        if (this.type === "classic") {
+          this.icons = ["rock", "paper", "scissors"];
+        } else if (this.type === "difficult") {
+          this.icons = ["rock", "paper", "scissors", "lizard", "spock"];
+        }
+      }
+      selectWinner() {
+        if (this.human.currentChoice === "rock" && (this.computer.currentChoice === "scissors" || this.computer.currentChoice === "lizard")) {
+          return this.winner = "human"
+        } else if (this.human.currentChoice === "paper" && (this.computer.currentChoice === "rock" || this.computer.currentChoice === "spock")) {
+          return this.winner = "human"
+        } else if (this.human.currentChoice === "scissors" && (this.computer.currentChoice === "paper" || this.computer.currentChoice === "lizard")) {
+          return this.winner = "human"
+        } else if (this.human.currentChoice === "lizard" && (this.computer.currentChoice === "paper" || this.computer.currentChoice === "spock")) {
+          return this.winner = "human"
+        } else if (this.human.currentChoice === "spock" && (this.computer.currentChoice === "rock" || this.computer.currentChoice === "scissors")) {
+          return this.winner = "human"
+        } else {
+          return this.winner = "computer"
+        }
+      }
+    
+      checkForDraw() {
+        if (this.human.currentChoice === this.computer.currentChoice) {
+          return this.winner = "";
+        }
+      }
+    
+      checkWin() {
+        if (this.winner === "human") {
+        this.human.win++
+      } else if (this.winner === "computer") {
+        this.computer.win++
+      }
+     }
     }
-
-    declareWinner() {
-        if (this.cpuPick === this.humanPick) {
-            console.log('tie')
-        }
-        else if (this.cpuPick === 0 && this.humanPick === 1) {
-            this.humanWinCount += 1 
-        }
-        else if (this.cpuPick === 0 && this.humanPick === 2) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 0 && this.humanPick === 3) {
-           this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 0 && this.humanPick === 4) {
-            this.humanWinCount += 1
-        }
-        else if (this.cpuPick === 3 && this.humanPick === 1) {
-            this.humanWinCount += 1
-        }
-        else if (this.cpuPick === 3 && this.humanPick === 4) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 3 && this.humanPick === 2) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 3 && this.humanPick === 0) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 2 && this.humanPick === 4) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 2 && this.humanPick === 0) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 2 && this.humanPick === 1) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 2 && this.humanPick === 3) {
-            this.humanWinCount += 1
-        }
-        else if (this.cpuPick === 4 && this.humanPick === 0) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 4 && this.humanPick === 3) {
-            this.humanWinCountm += 1
-        }
-        else if (this.cpuPick === 4 && this.humanPick === 1) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 4 && this.humanPick === 2) {
-            this.humanWinCount += 1
-        }
-        else if (this.cpuPick === 1 && this.humanPick === 0) {
-            this.cpuWinCount += 1
-        }
-        else if (this.cpuPick === 1 && this.humanPick === 2) {
-            this.humanWinCount += 1
-        }
-        else if (this.cpuPick === 1 && this.humanPick === 4) {
-            this.humanWinCount += 1
-        }
-        else if (this.cpuPick === 1 && this.humanPick === 3) {
-            this.cpuWinCount += 1
-        }
-    }
-    playAgain() {
-        this.humanWinCount = 0
-        this.cpuWinCount = 0
-    }
-
-}
-// add tie functionallity for dom
-// in game class reset game method
-// 
+    
