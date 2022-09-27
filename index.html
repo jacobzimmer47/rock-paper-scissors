@@ -1,38 +1,66 @@
 <!DOCTYPE html>
-    <html lang="'en">
-    <head> 
-        <link rel="stylesheet" href='./styles.css'>
-    </head>
-    <body>
-        <section class="human-side">
-            <div class="human-info">
-                <p class="human-icon">🧍🏼</p>
-                <p class="human-title">Human</p>
-                <p class="human-win-count">WINS: </p>
-            </div>
-        </section>
-        <section class="center-section">
-            <h1 class="center-title1">ROCK PAPER SCISSORS</h1>
-            <h3 class="smCenter-title" >Pick your fighter!</h3>
-            <button class="reset-button" id="reset-button">Next Battle</button>
-            <button class="new-game-button" id="new-game-button">Play Again</button>
-            <div class="fight-section">
-                <p class="scissors-fighter" id="0">✄</p>
-                <p class="paper-fighter" id="2">📑</p>
-                <p class="rock-fighter" id="1">🪨</p>
-                <p class="lizard-fighter" id="3">🦎</p>
-                <p class="spock-fighter" id="4">🖖🏽</p>
-            </div>
-        </section>
-        <section class="cpu-section">
-            <div class="cpu-info">
-                <p class="cpu-icon">🤖</p>
-                <p class="cpu-title">Computure</p>
-                <p class="cpu-win-count">WINS:</p>
-            </div>
-        </section>
-    </body>
-    <script type="text/javascript" src="game.js"></script>
-    <script type="text/javascript" src="player.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-</html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <section class="human-side">
+      <p id="human-icon" class="choice">🧍🏼</p>
+      <h2>Human</h2>
+      <p class="human-wins">Wins</p>
+      <button class="change-game-button hidden">Change Game</button>
+    </section>
+    <section class="main">
+      <article class ="main-text">
+        <h1 class="title">Rock, Paper, Scissors</h1>
+        <h3 class="subtitle">Choose your Game!</h3>
+        <h3 class="subtitleTwo hidden">Choose your fighter!</h3>
+      </article>
+      <section class="fighter-choices hidden">
+        <div class="classic-icons hidden">
+            <p id="rock" class="choice">🪨</p> 
+            <p id="paper" class="choice">📑</p>
+            <p id="scissors" class="choice">🔪</p>
+        </div>
+        <div class="difficult-icons hidden">
+            <p id="rock" class="choice">🪨</p> 
+            <p id="paper" class="choice">📑</p>
+            <p id="scissors" class="choice">🔪</p>
+            <p id="spock" class="choice">🖖🏽</p>
+            <p id="lizard" class="choice">🦎</p>
+        </div>
+      </section>
+      <h2 class="winner hidden"></h2>
+      <section class="show-winner">
+      </section>
+      <section class="game-side">
+        <button class ="rules-box" id="Classic">
+          <section class="content">
+            <h4>CLASSIC</h4>
+            <p>rock > scissors</p>
+            <p>paper > rock</P>
+            <p>scissors > paper</p>
+        </button>
+          </section>
+          <button class ="rules-box-two" id="Difficult">
+          <div class="content">
+            <h4>DIFFICULT</h4>
+            <p>rock > scissors & lizard</p>
+            <p>paper > rock & spock</p>
+            <p>scissors > paper & lizard</p>
+            <p>lizard > paper & spock</p>
+            <p>spock > scissors & rock</p>
+      </section>
+      <section class="cpu-side">
+        <p id="cpu-icon" class="choice">🤖</p>
+        <h2>CPU</h2>
+        <p class="cpu-wins">Wins</p>
+      </section>
+    </section>
+    <script type ="text/javascript" src="game.js"></script>
+    <script type ="text/javascript" src="player.js"></script>
+    <script type ="text/javascript" src="main.js"></script>
+  </body>
+  </html>
+
