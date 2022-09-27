@@ -18,15 +18,15 @@ class Game {
         if (this.human.currentChoice === "rock" && (this.computer.currentChoice === "scissors" || this.computer.currentChoice === "lizard")) {
           return this.winner = "human"
         } else if (this.human.currentChoice === "paper" && (this.computer.currentChoice === "rock" || this.computer.currentChoice === "spock")) {
-          return this.winner = "human"
+            return this.winner = "human"
         } else if (this.human.currentChoice === "scissors" && (this.computer.currentChoice === "paper" || this.computer.currentChoice === "lizard")) {
-          return this.winner = "human"
+            return this.winner = "human"
         } else if (this.human.currentChoice === "lizard" && (this.computer.currentChoice === "paper" || this.computer.currentChoice === "spock")) {
-          return this.winner = "human"
+            return this.winner = "human"
         } else if (this.human.currentChoice === "spock" && (this.computer.currentChoice === "rock" || this.computer.currentChoice === "scissors")) {
-          return this.winner = "human"
+            return this.winner = "human"
         } else {
-          return this.winner = "computer"
+            return this.winner = "computer"
         }
       }
     
@@ -38,9 +38,9 @@ class Game {
     
       checkWin() {
         if (this.winner === "human") {
-        this.human.win++
+          this.human.win++
       } else if (this.winner === "computer") {
-        this.computer.win++
+          this.computer.win++
       }
      }
     }
