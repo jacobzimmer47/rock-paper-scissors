@@ -2,7 +2,7 @@
 This Rock, Paper, Scissors app includes a classic and difficult mode that includes a lizard and spock fighter. Expanding on the classic rock paper scissors game. 
 
 # Installation
-1. Fork the ColoRandom repository
+1. Fork this repository
 2. Clone down your new, forked repo
 3. In the terminal cd into the repository
 4. Open it in your text editor to view our code
