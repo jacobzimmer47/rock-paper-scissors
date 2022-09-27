@@ -1,11 +1,6 @@
-
-
-
 var game = new Game();
 var classic = ["rock", "paper", "scissors"]
 var difficult = ["rock", "paper", "scissors", "spock", "lizard"]
-
-
 
 var classicGameRules = document.querySelector(".rules-box");
 var difficultGameRules = document.querySelector(".rules-box-two");
@@ -22,13 +17,11 @@ var mainText = document.querySelector(".main-text");
 var humanWins = document.querySelector(".human-wins");
 var cpuWins = document.querySelector(".cpu-wins");
 
-
 classicGameRules.addEventListener('click', playClassicGame);
 difficultGameRules.addEventListener('click', playChallengeGame);
 changeGameButton.addEventListener('click', returnToHomePage);
 classicIcons.addEventListener('click', playGame);
 difficultIcons.addEventListener('click', playGame);
-
 
 function showWinner() {
   classicIcons.classList.add("hidden");
@@ -40,11 +33,11 @@ function showWinner() {
 function showWinnerText() {
   winnerText.classList.remove("hidden");
   if (game.winner === "human") {
-  winnerText.innerText = "YOU WIN!"
+    winnerText.innerText = "YOU WIN!"
   } else if (game.winner === "computer") {
-  winnerText.innerText = "CPU WINS!"
+    winnerText.innerText = "CPU WINS!"
   } else if (game.winner === ""){
-  winnerText.innerText = "Tie"
+    winnerText.innerText = "Tie"
   }
 }
 

@@ -1,5 +1,3 @@
-
-
 html {
     background-color:black;
     background-size: cover;
@@ -7,10 +5,9 @@ html {
     width: 100vw;
     height: 100vh;
     opacity: inherit;
-  }
+}
 
-  
-  body {
+body {
     display: flex;
     font-family: sans-serif;
     font-size: 20px;
@@ -18,39 +15,38 @@ html {
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
-  }
+}
   
-  .main {
+.main {
     display:flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
+}
   
-  }
-  .title, h3 {
+.title, h3 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: flex-start;
     align-content: flex-start;
-  }
+}
   
-  .human-side {
+.human-side {
     margin-left: 5%;
     align-items: center;
     float: left;
     padding: 50px;
     width: 25%;
     font-family: sans-serif;
-    
-  }
+}
   
-  .game-side {
+.game-side {
     width: 25%;
-  }
+}
   
-  .rules-box {
+.rules-box {
     align-items: center;
     background-color: #3fd370;
     border-radius: 15%;
@@ -61,9 +57,9 @@ html {
     width: 80%;
     transition: 100ms;
     margin-left: 11%;
-  }
+}
   
-  .rules-box-two {
+.rules-box-two {
     align-items: center;
     background-color: red;
     border-radius: 15%;
@@ -74,51 +70,51 @@ html {
     width: 100%;
     width: 20%;
     margin-top: 5%;
-  }
+}
   
-  .content {
+.content {
     font-size: 10px;
     color: white;
     font-family: sans-serif;
-    }
+}
   
-  .fighter-choices, .show-winner {
+.fighter-choices, .show-winner {
     display: flex;
     justify-content: center;
     margin: 20px 0 25px;
     font-size: 30px;
-    }
+}
   
-  .choice {
+.choice {
     height:100px;
     width: 100px;
     cursor: pointer;
     margin-top: 20%;
     transition: all 0.1s ease;
-  }
+}
   
-  #human-icon, #cpu-icon {
+#human-icon, #cpu-icon {
     display: flex;
     justify-content: center;
     font-size: 50px;
 
-  }
+}
   
-  .classic-icons, .difficult-icons {
+.classic-icons, .difficult-icons {
     display: flex;
     justify-content: center;
     margin: 20px 0 25px;
-  }
+}
   
-  .cpu-side {
+.cpu-side {
     margin-left: 5%;
     align-items: center;
     float: left;
     padding: 50px;
     width: 25%
-  }
+}
   
-  .change-game-button {
+.change-game-button {
     background-color: #5D3FD3;
     border-color: #5D3FD3;
     border-radius: 8%;
@@ -128,8 +124,8 @@ html {
     color: white;
   }
   
-  .hidden {
+.hidden {
     display: none;
-  }
+}
 
 

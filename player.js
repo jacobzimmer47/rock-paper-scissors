@@ -9,9 +9,9 @@ class Player {
   
     getCpuChoice() {
       if (game.type === "classic") {
-        game.computer.currentChoice = classic[this.generatePick(classic)]
+          game.computer.currentChoice = classic[this.generatePick(classic)]
       } else {
-        game.computer.currentChoice = difficult[this.generatePick(difficult)]
+          game.computer.currentChoice = difficult[this.generatePick(difficult)]
       }
     }
   
