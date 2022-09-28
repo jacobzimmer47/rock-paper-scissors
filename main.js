@@ -33,11 +33,11 @@ function showWinner() {
 function showWinnerText() {
   winnerText.classList.remove("hidden");
   if (game.winner === "human") {
-    winnerText.innerText = "YOU WIN!"
+    winnerText.innerHTML = `<p> YOU WIN! <br> CPU pick: ${game.computer.currentChoice} <br> Your pick: ${game.human.currentChoice}</p> `
   } else if (game.winner === "computer") {
-    winnerText.innerText = "CPU WINS!"
+    winnerText.innerHTML = `<p> CPU WINS! <br> CPU pick: ${game.computer.currentChoice} <br> Your pick: ${game.human.currentChoice} </p>`
   } else if (game.winner === ""){
-    winnerText.innerText = "Tie"
+    winnerText.innerHTML = `<p> Tie! <br> cpu pick: ${game.computer.currentChoice}<br> your pick: ${game.human.currentChoice} </p>`
   }
 }
 
@@ -49,6 +49,7 @@ function playGame(event) {
   game.selectWinner();
   game.checkForDraw();
   game.checkWin();
+
   tallyScore();
   showWinner();
   setTimeout(reset, 2000);
